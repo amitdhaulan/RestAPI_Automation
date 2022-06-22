@@ -6,10 +6,9 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
 import static io.restassured.RestAssured.given;
 
-public class RAAutomation {
+public class RestAssured_Automation {
     private static String requestBody = "{\n" +
             "  \"title\": \"foo\",\n" +
             "  \"body\": \"bar\",\n" +
@@ -32,7 +31,7 @@ public class RAAutomation {
     @Test(priority = 1)
     public void getRequestWithQueryParameter() {
         RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
-        Response response = given()
+        Response response = given().log().all()
                 .contentType(ContentType.JSON)
                 .param("postId", "2")
                 .when().log().all()
