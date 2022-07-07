@@ -1,3 +1,5 @@
+package Code;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.parsing.Parser;
@@ -7,7 +9,7 @@ import static io.restassured.RestAssured.given;
 
 public class GetRequestClass {
 
-    public Response getResuest(String  endPoint){
+    public Response getRequest(String  endPoint){
         RestAssured.defaultParser = Parser.JSON;
         return
                 given().headers("Content-Type", ContentType.JSON, "Accept", ContentType.JSON).

@@ -1,4 +1,4 @@
-package Test.Pack;
+package Test.RestAssuredAutomation;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
