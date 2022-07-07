@@ -1,3 +1,4 @@
+package Test.RestAssuredAutomation;
 
 import io.restassured.RestAssured;
 
